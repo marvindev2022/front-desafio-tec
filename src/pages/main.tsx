@@ -12,25 +12,27 @@ export default function Main() {
   const [position, setPosition] = useState("Home");
   const [showModal, setShowModal] = useState(false);
   const [open, setOpen] = useState(true);
-  
+
   return (
     <section className="flex w-screen h-screen  justify-between p-20 ">
       <RenderSidebar open={open} setOpen={setOpen} setPosition={setPosition} />
 
-      <div className={` flex flex-col justify-start items-center w-full max-h-full px-12  overflow-hidden ml-[18rem] gap-10`}>
+      <div
+        className={` flex flex-col justify-start items-center w-full max-h-full px-12  overflow-hidden ml-[18rem] gap-10`}
+      >
         <RenderHeader
-        open={open}
+          open={open}
           position={position}
           setPosition={setPosition}
           showModal={showModal}
           setShowModal={setShowModal}
         />
-        {showModal && <ModalHeaderMain/>}
-        {position === "My Courses" && <ModalCourses/>} 
-        {position === "Time Table" && <ModalTimeTable/> }
-        {position === "Forum" && <ModalForum/>}
-        {position === "Settings" && <ModalSettings/>}
-        {position === "Home" && <ModalDashBoard/> }
+        {showModal && <ModalHeaderMain />}
+        {position === "My Courses" && <ModalCourses />}
+        {position === "Time Table" && <ModalTimeTable />}
+        {position === "Forum" && <ModalForum />}
+        {position === "Settings" && <ModalSettings />}
+        {position === "Home" && <ModalDashBoard />}
       </div>
     </section>
   );
