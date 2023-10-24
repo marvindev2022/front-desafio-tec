@@ -27,7 +27,7 @@ export default function Signup() {
     }
 
     if (password.length < 6) {
-      return notifyError("A senha deve ter no mínimo 6 caracteres");
+      return notifyError("A senha deve ter no mínimo 6 caracteres!");
     }
     try {
       const { data } = await api.post("/register", {

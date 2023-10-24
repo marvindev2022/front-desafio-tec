@@ -15,7 +15,7 @@ export default function ModalDashBoard() {
           backgroundSize: "contain",
           backgroundPosition: "center",
         }}
-      className="flex flex-col w-full min-h-[21.875rem] rounded-lg bg-white mb-10"
+        className="flex flex-col w-full min-h-[21.875rem] rounded-lg bg-white mb-10"
       />
       <div className="flex justify-around w-full ">
         <div className="flex bg-[#0A5F6F] w-72 h-32 rounded-lg justify-center items-center text-white gap-5 text-xl font-bold">

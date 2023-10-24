@@ -1,5 +1,6 @@
 import message from "./../assets/message.png";
 import notification from "./../assets/notification.png";
+
 export default function RenderHeader({
   position,
   setPosition,
@@ -17,7 +18,7 @@ export default function RenderHeader({
       className={`relative  flex justify-between items-center w-full min-h-[5rem] `}
     >
       <h2 className="text-[#000606] font-playpen-sans font-medium text-4xl">
-        {position === "Home" ?"Dashboard" : position}
+        {position === "Home" ? "Dashboard" : position}
       </h2>
       <div className="flex gap-8 cursor-pointer">
         <img

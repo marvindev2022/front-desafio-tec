@@ -5,7 +5,7 @@ export default function ModalHeaderMain() {
     <div className="absolute  w-64 h-80 flex flex-col top-44 right-36 z-[999]  bg-white rounded-b-lg">
       <div className="relative">
         <img
-          className="absolute -top-[1.59rem] right-14 w-10 h-10 z-10"
+          className="absolute m-top-[1.59rem] right-14 w-10 h-10 z-10"
           src={notif}
           alt=""
         />

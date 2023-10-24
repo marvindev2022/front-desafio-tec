@@ -24,7 +24,11 @@ const menuOptions: MenuOption[] = [
   { label: "Settings", icon: Settings, position: "Settings" },
 ];
 
-export default function RenderSidebar({ open, setOpen, setPosition }: React.PropsWithChildren<any>) {
+export default function RenderSidebar({
+  open,
+  setOpen,
+  setPosition,
+}: React.PropsWithChildren<any>) {
   const [dashWidth, setDashWidth] = useState("w-[15rem]");
   const navigate = useNavigate();
 
@@ -86,13 +90,20 @@ export default function RenderSidebar({ open, setOpen, setPosition }: React.Prop
               } h-16 rounded-lg hover:transform hover:scale-110 hover:transition-transform `}
             >
               <img className="w-12 h-10" src={option.icon} alt={option.label} />
-              {open && <span className="text-black w-24 font-poppins">{option.label}</span>}
+              {open && (
+                <span className="text-black w-24 font-poppins">
+                  {option.label}
+                </span>
+              )}
             </li>
           ))}
-          <button onClick={() => {
-            localStorage.clear();
-            window.location.reload();
-          }} className="flex w-[10rem] h-16 text-white rounded-lg font-poppins hover:font-extrabold text-[1.5rem] items-center justify-center gap-4">
+          <button
+            onClick={() => {
+              localStorage.clear();
+              window.location.reload();
+            }}
+            className="flex w-[10rem] h-16 text-white rounded-lg font-poppins hover:font-extrabold text-[1.5rem] items-center justify-center gap-4"
+          >
             <img src={logout} className="w-6 h-6 " alt="Logout" />
             {open && "Logout"}
           </button>
@@ -101,4 +112,3 @@ export default function RenderSidebar({ open, setOpen, setPosition }: React.Prop
     </div>
   );
 }
-

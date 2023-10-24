@@ -11,7 +11,7 @@ export default function Signin() {
     e.preventDefault();
     e.stopPropagation();
     if (!username || !password) {
-      return alert("Preencha todos os campos");
+      return alert("Preencha todos os campos!");
     }
     try {
       const { data } = await api.post("/login", {

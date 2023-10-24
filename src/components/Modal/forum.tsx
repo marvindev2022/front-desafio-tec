@@ -1,6 +1,8 @@
 import { useState } from "react";
+
 export default function ModalForum() {
   const [search, setSearch] = useState<string>("");
+  
   return (
     <section className="w-full h-full flex  top-44 right-36 z-10  mt-10">
       <div className="flex flex-col w-full h-80 rounded-lg ">
