@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import api from "./../../services/instance";
 import { getItem, setItem } from "../../utils/storage";
 import profile from "./../../assets/profile.png";
-import { formatDistanceToNow } from "date-fns";
 import { notifyError, notifySucess } from "../../utils/toastify";
-import { useNavigate } from "react-router-dom";
-import AppTeste from "../app";
+import AppTeste from "../help";
 import RenderForum from "..";
 import timeAgoFuncFunc from "../../utils/timeAgo";
 
@@ -25,13 +23,10 @@ export default function ModalForum() {
   const [search, setSearch] = useState<string>("");
   const [open, setOpen] = useState<boolean>(false);
   const [topics, setTopics] = useState<Topic[]>([]);
-  const [topic, setTopic] = useState<Topic>({} as Topic);
-  const [messages, setMessages] = useState<any[]>([]);
   const [searchResults, setSearchResults] = useState<Topic[]>(topics);
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
   const [render, setRender] = useState<boolean>(false);
-
 
   const handleSubmitTopic = (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,22 +75,8 @@ export default function ModalForum() {
           )
         );
       }
+
       fetchTopicsData();
-      async function fetchMessageData() {
-        const { data } = await api.get("/messages", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
-        setMessages(
-          data.sort(
-            (a: any, b: any) =>
-              new Date(a.created_at).getTime() -
-              new Date(b.created_at).getTime()
-          )
-        );
-      }
-      fetchMessageData();
     } catch (err: any) {
       console.log(err);
     }
