@@ -1,27 +1,48 @@
-# React + TypeScript + Vite
+# Título: Fórum de Discussão - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição
 
-Currently, two official plugins are available:
+Este é o frontend da aplicação de "Fórum de Discussão" para a plataforma de LMS SaaS. Ele fornece uma interface de usuário para interagir com o fórum, incluindo a visualização de tópicos e mensagens, postagem de mensagens e muito mais.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Requisitos Técnicos
 
-## Expanding the ESLint configuration
+- **React e React Native**: Utilizamos o React para criar uma interface de usuário responsiva.
+- **Integração com Backend**: O frontend se integra com o backend para buscar e enviar dados.
+- **Git**: Utilizamos o Git para controle de versão do código-fonte.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#### Como Executar o Frontend
 
-- Configure the top-level `parserOptions` property like this:
+1.Clone este repositório.
 
 ```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+git clone <URL do Repositório>
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2.Navegue até a pasta do projeto.
+
+```js
+cd frontend
+```
+
+3.Instale as dependências.
+
+```js
+npm install
+```
+
+4.Inicie o servidor de desenvolvimento.
+
+```js
+npm run dev
+```
+
+5.O frontend estará disponível em `http://localhost:5173`.
+
+#### Estrutura do Projeto
+
+- `src/`: Contém os componentes, páginas e lógica do aplicativo.
+- `public/`: Arquivos estáticos e HTML principal.
+
+#### Autor
+
+- Marcus Roza

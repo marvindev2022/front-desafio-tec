@@ -11,6 +11,7 @@ import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import { getItem } from "./utils/storage";
 import Main from "./pages/main";
+import RenderForum from "./components";
 
 function MainRoutes(): JSX.Element {
   function ProtectedRoutes() {

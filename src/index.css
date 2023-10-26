@@ -21,3 +21,6 @@ body {
 body.modal-open {
   overflow: hidden;
 }
+input{
+  min-height: 3.125rem;
+}

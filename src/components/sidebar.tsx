@@ -49,7 +49,7 @@ export default function RenderSidebar({
     <div
       className={`${
         open ? dashWidth : "w-[15rem]"
-      }"  px-5 pt-10 flex flex-col bg-[#00173D] absolute left-6 rounded-lg gap-10 max-w-[108rem] max-h-[69.8125rem]
+      }" h-[90%]  px-5 pt-10 flex flex-col bg-[#00173D] absolute left-6 rounded-lg gap-12 max-w-[108rem] max-h-[69.8125rem]
       }`}
     >
       <span
